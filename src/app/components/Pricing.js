@@ -9,7 +9,7 @@ const PricingPage = () => {
 
   // Ajout de configuration correcte du hook useInView
   const [ref, inView] = useInView({
-    triggerOnce: true, // Animation ne se déclenche qu'une fois
+    triggerOnce: false, // Animation ne se déclenche qu'une fois
     threshold: 0.1, // Le pourcentage visible avant déclenchement
   });
 
@@ -37,8 +37,10 @@ const PricingPage = () => {
   };
 
   return (
-    <section className="flex flex-col items-center justify-center p-6 min-h-screen">
-      <h1 className="text-3xl font-bold mb-8">Nos Formules</h1>
+    <section className="flex flex-col items-center justify-center p-6 min-h-[70vh]">
+      <h1 className="text-3xl font-bold mb-8" id="formules">
+        Nos Formules
+      </h1>
       <motion.div
         ref={ref}
         variants={containerVariants}

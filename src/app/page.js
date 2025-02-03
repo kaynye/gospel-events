@@ -31,9 +31,11 @@ export default function Home() {
           </div>
         </div>
         {/* Qui somme nous */}
-        <div className="md:flex justify-around flex-row-reverse px-8 bg-darkBlue my-8">
-          <div className="flex-[1] self-center pt-4">
-            <h3 className="text-5xl">Qui sommes nous ?</h3>
+        <div className="md:flex justify-around flex-row-reverse px-8 bg-darkBlue py-4">
+          <div className="flex-[1] self-center ">
+            <h3 className="text-5xl" id="who">
+              Qui sommes nous ?
+            </h3>
             <p className="mt-4">
               Gospel Events God Bless You est une SAS gérée par Joëlle GENEVIEVE
               & Stéphanie NZIENGUE. Cette entreprise souhaite partager le cœur
@@ -55,7 +57,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="flex-[1] my-8">
+          <div className="flex-[1] mt-4">
             <Image
               src="/group.jpg"
               alt="Musique band"

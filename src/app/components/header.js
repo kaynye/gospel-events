@@ -43,12 +43,12 @@ export default function Header() {
             </a>
           </li>
           <li>
-            <a href="#" className=" hover:underline">
+            <a href="#who" className=" hover:underline">
               Qui nous sommes
             </a>
           </li>
           <li>
-            <a href="#" className=" hover:underline">
+            <a href="#formules" className=" hover:underline">
               Formules
             </a>
           </li>
@@ -88,7 +88,7 @@ export default function Header() {
       <nav
         className={` ${
           isOpen ? "translate-x-0" : "translate-x-full"
-        } absolute top-0 bg-primary duration-700 transform transition-transform h-screen w-screen block md:hidden`}
+        }  fixed top-0 bg-primary duration-700 transform transition-transform h-screen w-screen block md:hidden`}
       >
         <CrossOutline
           className="justify-self-end"
@@ -97,22 +97,38 @@ export default function Header() {
 
         <ul className="flex flex-col h-full justify-evenly items-center text-3xl">
           <li>
-            <a href="#" className=" hover:underline">
+            <a
+              href="#"
+              onClick={() => setIsOpen(false)}
+              className=" hover:underline"
+            >
               Acceuil
             </a>
           </li>
           <li>
-            <a href="#" className=" hover:underline">
+            <a
+              href="#who"
+              onClick={() => setIsOpen(false)}
+              className=" hover:underline"
+            >
               Qui nous sommes
             </a>
           </li>
           <li>
-            <a href="#" className=" hover:underline">
+            <a
+              href="#formules"
+              onClick={() => setIsOpen(false)}
+              className=" hover:underline"
+            >
               Formules
             </a>
           </li>
           <li>
-            <a href="#" className=" hover:underline">
+            <a
+              href="#"
+              onClick={() => setIsOpen(false)}
+              className=" hover:underline"
+            >
               Contact
             </a>
           </li>
