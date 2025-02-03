@@ -5,6 +5,27 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary: rgb(232, 206, 176);
+  --primary-text-color: #ffffff;
+  --dark-blue: #117170;
+  --light-blue: #0E918C;
+  --secondary: #532B2B;
+  --terciary: #F14D25;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.5s ease-in-out forwards;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -15,7 +36,7 @@
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  color: var(--primary-text-color);
+  background: var(--primary);
   font-family: Arial, Helvetica, sans-serif;
 }
