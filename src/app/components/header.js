@@ -91,12 +91,12 @@ export default function Header() {
         }  fixed top-0 bg-primary duration-700 transform transition-transform h-screen w-screen block md:hidden`}
       >
         <CrossOutline
-          className="justify-self-end"
+          className="align-left absolute right-1 top-4"
           onClick={() => setIsOpen(false)}
         />
 
-        <ul className="flex flex-col h-full justify-evenly items-center text-3xl">
-          <li>
+        <ul className="flex flex-col h-full items-center text-3xl">
+          <li className="mt-32">
             <a
               href="#"
               onClick={() => setIsOpen(false)}
@@ -105,7 +105,7 @@ export default function Header() {
               Acceuil
             </a>
           </li>
-          <li>
+          <li className="pt-8">
             <a
               href="#who"
               onClick={() => setIsOpen(false)}
@@ -114,7 +114,7 @@ export default function Header() {
               Qui nous sommes
             </a>
           </li>
-          <li>
+          <li className="pt-8">
             <a
               href="#formules"
               onClick={() => setIsOpen(false)}
@@ -123,7 +123,7 @@ export default function Header() {
               Formules
             </a>
           </li>
-          <li>
+          <li className="pt-7">
             <a
               href="#"
               onClick={() => setIsOpen(false)}
@@ -159,8 +159,8 @@ export function CrossOutline(props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="4em"
-      height="4em"
+      width="5em"
+      height="5em"
       viewBox="0 0 24 24"
       {...props}
     >
