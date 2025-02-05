@@ -39,12 +39,17 @@ export default function Header() {
         <ul className="flex justify-around text-3xl">
           <li>
             <a href="#" className=" hover:underline">
-              Acceuil
+              Accueil
             </a>
           </li>
           <li>
             <a href="#who" className=" hover:underline">
               Qui nous sommes
+            </a>
+          </li>
+          <li>
+            <a href="#chant" className=" hover:underline">
+              Base de chants
             </a>
           </li>
           <li>
@@ -59,31 +64,6 @@ export default function Header() {
           </li>
         </ul>
       </nav>
-
-      {/* <nav className="border border-white hidden sm:block">
-        <ul className="flex justify-around text-3xl">
-          <li>
-            <a href="#" className=" hover:underline">
-              Acceuil
-            </a>
-          </li>
-          <li>
-            <a href="#" className=" hover:underline">
-              Qui nous sommes
-            </a>
-          </li>
-          <li>
-            <a href="#" className=" hover:underline">
-              Formules
-            </a>
-          </li>
-          <li>
-            <a href="#" className=" hover:underline">
-              Contact
-            </a>
-          </li>
-        </ul>
-          </nav> */}
 
       <nav
         className={` ${
@@ -102,7 +82,7 @@ export default function Header() {
               onClick={() => setIsOpen(false)}
               className=" hover:underline"
             >
-              Acceuil
+              Accueil
             </a>
           </li>
           <li className="pt-8">
@@ -112,6 +92,15 @@ export default function Header() {
               className=" hover:underline"
             >
               Qui nous sommes
+            </a>
+          </li>
+          <li>
+            <a
+              href="/chant"
+              onClick={() => setIsOpen(false)}
+              className=" hover:underline"
+            >
+              Base de chants
             </a>
           </li>
           <li className="pt-8">
