@@ -142,7 +142,7 @@ export function IcSharpMenu(props) {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="3em"
-      height="3em"
+      height="3 em"
       viewBox="0 0 24 24"
       {...props}
     >
@@ -276,7 +276,6 @@ const Navbar = () => {
               <CrossOutline
                 className="absolute top-6 right-4 text-white cursor-pointer"
                 onClick={toggleModal}
-                style={{ fontSize: "16px" }}
               />
               <div className="relative  w-full">
                 <div className="flex flex-col gap-8 items-center justify-center h-full">
