@@ -1,129 +1,135 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { Quintessential } from "next/font/google";
+import localFont from "next/font/local";
 
 const quintessential = Quintessential({
   weight: "400",
   subsets: ["latin"],
 });
 
+const mocholate = localFont({
+  src: "../font/Micholate.otf",
+});
+
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header>
-      <div className="flex items-center py-4 md:justify-normal justify-between">
-        <Image
-          className="dark:invert"
-          src="/logo.png"
-          alt="Next.js logo"
-          width={100}
-          height={38}
-          priority
-        />
+    <Navbar />
+    // <header className="sticky top-0">
+    //   <div className="flex items-center py-4 md:justify-normal justify-between">
+    //     <Image
+    //       className="dark:invert"
+    //       src="/logo.png"
+    //       alt="Next.js logo"
+    //       width={100}
+    //       height={38}
+    //       priority
+    //     />
 
-        <h2
-          className={`${quintessential.className} text-8xl mx-auto hidden sm:block`}
-        >
-          God bless you
-        </h2>
+    //     <h2
+    //       className={`${quintessential.className} text-8xl mx-auto hidden sm:block`}
+    //     >
+    //       God bless you
+    //     </h2>
 
-        <div className="p-4 self-start block sm:hidden">
-          <IcSharpMenu className="" onClick={() => setIsOpen(true)} />
-        </div>
-      </div>
-      <nav className="border border-white hidden sm:block">
-        <ul className="flex justify-around text-3xl">
-          <li>
-            <a href="#" className=" hover:underline">
-              Accueil
-            </a>
-          </li>
-          <li>
-            <a href="#who" className=" hover:underline">
-              Qui nous sommes
-            </a>
-          </li>
-          <li>
-            <a href="#chant" className=" hover:underline">
-              Base de chants
-            </a>
-          </li>
-          <li>
-            <a href="#formules" className=" hover:underline">
-              Formules
-            </a>
-          </li>
-          <li>
-            <a href="#" className=" hover:underline">
-              Contact
-            </a>
-          </li>
-        </ul>
-      </nav>
+    //     <div className="p-4 self-start block sm:hidden">
+    //       <IcSharpMenu className="" onClick={() => setIsOpen(true)} />
+    //     </div>
+    //   </div>
+    //   <nav className="border-b border-white hidden sm:block ">
+    //     <ul className="flex justify-around text-3xl">
+    //       <li>
+    //         <a href="#" className=" hover:underline">
+    //           Accueil
+    //         </a>
+    //       </li>
+    //       <li>
+    //         <a href="#who" className=" hover:underline">
+    //           Qui sommes-nous
+    //         </a>
+    //       </li>
+    //       <li>
+    //         <a href="#chant" className=" hover:underline">
+    //           Bibliothéque
+    //         </a>
+    //       </li>
+    //       <li>
+    //         <a href="#formules" className=" hover:underline">
+    //           Formules
+    //         </a>
+    //       </li>
+    //       <li>
+    //         <a href="#" className=" hover:underline">
+    //           Contact
+    //         </a>
+    //       </li>
+    //     </ul>
+    //   </nav>
 
-      <nav
-        className={` ${
-          isOpen ? "translate-x-0" : "translate-x-full"
-        }  fixed top-0 bg-primary duration-700 transform transition-transform h-screen w-screen block md:hidden`}
-      >
-        <CrossOutline
-          className="align-left absolute right-1 top-4"
-          onClick={() => setIsOpen(false)}
-        />
+    //   <nav
+    //     className={` ${
+    //       isOpen ? "translate-x-0" : "translate-x-full"
+    //     }  fixed top-0 bg-primary duration-700 transform transition-transform h-screen w-screen block md:hidden`}
+    //   >
+    //     <CrossOutline
+    //       className="align-left absolute right-1 top-4"
+    //       onClick={() => setIsOpen(false)}
+    //     />
 
-        <ul className="flex flex-col h-full items-center text-3xl">
-          <li className="mt-32">
-            <a
-              href="#"
-              onClick={() => setIsOpen(false)}
-              className=" hover:underline"
-            >
-              Accueil
-            </a>
-          </li>
-          <li className="pt-8">
-            <a
-              href="#who"
-              onClick={() => setIsOpen(false)}
-              className=" hover:underline"
-            >
-              Qui nous sommes
-            </a>
-          </li>
-          <li>
-            <a
-              href="/chant"
-              onClick={() => setIsOpen(false)}
-              className=" hover:underline"
-            >
-              Base de chants
-            </a>
-          </li>
-          <li className="pt-8">
-            <a
-              href="#formules"
-              onClick={() => setIsOpen(false)}
-              className=" hover:underline"
-            >
-              Formules
-            </a>
-          </li>
-          <li className="pt-7">
-            <a
-              href="#"
-              onClick={() => setIsOpen(false)}
-              className=" hover:underline"
-            >
-              Contact
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    //     <ul className="flex flex-col h-full items-center text-3xl">
+    //       <li className="mt-32">
+    //         <a
+    //           href="#"
+    //           onClick={() => setIsOpen(false)}
+    //           className=" hover:underline"
+    //         >
+    //           Accueil
+    //         </a>
+    //       </li>
+    //       <li className="pt-8">
+    //         <a
+    //           href="#who"
+    //           onClick={() => setIsOpen(false)}
+    //           className=" hover:underline"
+    //         >
+    //           Qui sommes-nous
+    //         </a>
+    //       </li>
+    //       <li>
+    //         <a
+    //           href="/chant"
+    //           onClick={() => setIsOpen(false)}
+    //           className=" hover:underline"
+    //         >
+    //           Bibliothéque
+    //         </a>
+    //       </li>
+    //       <li className="pt-8">
+    //         <a
+    //           href="#formules"
+    //           onClick={() => setIsOpen(false)}
+    //           className=" hover:underline"
+    //         >
+    //           Formules
+    //         </a>
+    //       </li>
+    //       <li className="pt-7">
+    //         <a
+    //           href="#"
+    //           onClick={() => setIsOpen(false)}
+    //           className=" hover:underline"
+    //         >
+    //           Contact
+    //         </a>
+    //       </li>
+    //     </ul>
+    //   </nav>
+    // </header>
   );
 }
 
@@ -148,8 +154,8 @@ export function CrossOutline(props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="5em"
-      height="5em"
+      width="2em"
+      height="2em"
       viewBox="0 0 24 24"
       {...props}
     >
@@ -162,3 +168,136 @@ export function CrossOutline(props) {
     </svg>
   );
 }
+
+const navLinks = [
+  { title: "Accueil", url: "/" },
+  { title: "Qui sommes-nous", url: "#who" },
+  { title: "Répertoire", url: "/chant" },
+  { title: "Formules", url: "#formules" },
+  { title: "Contact", url: "#formules" },
+];
+
+const iconList = [
+  // { icon: <CrossOutline /> },
+  // { icon: <CrossOutline /> },
+  // { icon: <CrossOutline /> },
+];
+
+const bgColor = "bg-gray-800";
+const modalColor = "bg-gray-900";
+
+const Navbar = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 769);
+  const [showModal, setShowModal] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 769);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const toggleModal = () => {
+    setShowModal(!showModal);
+  };
+
+  const handleBarsIconClick = () => {
+    toggleModal();
+  };
+  return (
+    <>
+      {!isMobile ? (
+        // Laptop Navbar Code Here
+        <nav
+          className={`h-auto bg-primary border border-b-white sticky top-0 z-20`}
+        >
+          <div className="flex justify-between mx-auto items-center py-0 px-24">
+            <div className="text-white font-bold text-xl">
+              <Image
+                className="dark:invert"
+                src="/logo.png"
+                alt="Next.js logo"
+                width={60}
+                height={38}
+                priority
+              />
+            </div>
+            <ul className="flex gap-8 md:gap-16 items-center justify-center text-center cursor-pointer">
+              {navLinks.map((link, index) => (
+                <li key={index} className={`text-white text-2xl `}>
+                  <a href={link.url}>{link.title}</a>
+                </li>
+              ))}
+            </ul>
+            <ul className="flex text-white gap-6 items-center cursor-pointer">
+              {iconList.map((item, index) => (
+                <div key={index}>{item.icon}</div>
+              ))}
+            </ul>
+          </div>
+        </nav>
+      ) : (
+        // Mobile Navbar Code Here
+        <nav
+          className={`h-fit w-screen bg-secondary border-white sticky top-0 `}
+        >
+          <div className="mx-auto flex justify-between items-center ">
+            <div className="text-white font-bold text-xl">
+              <Image
+                className="dark:invert"
+                src="/logo.png"
+                alt="Next.js logo"
+                width={60}
+                height={38}
+                priority
+              />
+            </div>
+            <div className="flex justify-end items-center gap-6 text-white cursor-pointer">
+              {iconList.map((item, index) => (
+                <div
+                  key={index}
+                  onClick={
+                    index === iconList.length - 1 ? handleBarsIconClick : null
+                  }
+                >
+                  {item.icon}
+                </div>
+              ))}
+              <IcSharpMenu
+                onClick={handleBarsIconClick}
+                className="text-white cursor-pointer"
+              />
+            </div>
+          </div>
+          {showModal && (
+            <div className="fixed inset-0 flex justify-center items-center ">
+              <div className={`absolute inset-0 bg-primary`} />
+              <CrossOutline
+                className="absolute top-6 right-4 text-white cursor-pointer"
+                onClick={toggleModal}
+                style={{ fontSize: "16px" }}
+              />
+              <div className="relative  w-full">
+                <div className="flex flex-col gap-8 items-center justify-center h-full">
+                  {navLinks.map((link, index) => (
+                    <span
+                      key={index}
+                      className="text-white font-light text-2xl cursor-pointer"
+                    >
+                      {link.title}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
+        </nav>
+      )}
+    </>
+  );
+};

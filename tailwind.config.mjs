@@ -14,7 +14,7 @@ export default {
         secondary: "var(--secondary)",
         terciary: "var(--terciary)",
         darkBlue: "var(--dark-blue)",
-        lightBlue: "var(--light-blue:)",
+        lightBlue: "var(--light-blue)",
       },
       animation: {
         "fade-in-up": "fadeInUp 0.5s ease-in-out forwards",

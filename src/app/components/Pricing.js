@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useAnimation } from "framer-motion";
+import Image from "next/image";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
@@ -37,10 +38,23 @@ const PricingPage = () => {
   };
 
   return (
-    <section className="flex flex-col items-center justify-center p-6 min-h-[70vh]">
-      <h1 className="text-3xl font-bold mb-8" id="formules">
+    <section className="flex flex-col items-center justify-center pt-12 pb-16 min-h-[70vh] bg-darkBlue">
+      <div className="flex justify-between w-full px-16">
+      <h2 className="text-3xl font-bold mb-8 " id="formules">
         Nos Formules
-      </h1>
+      </h2>
+      <h3 className="text-3xl font-bold mb-8 hidden md:block" id="formules">
+        Chaque formule pour chaque situation
+        </h3>
+        <Image
+          className="dark:invert"
+          src="/logo-primary.png"
+          alt="Next.js logo"
+          width={60}
+          height={38}
+          priority
+        />
+     </div>
       <motion.div
         ref={ref}
         variants={containerVariants}
@@ -52,11 +66,11 @@ const PricingPage = () => {
           <motion.div
             key={index}
             variants={cardVariants}
-            className="flex flex-col p-6 bg-secondary shadow-lg rounded-2xl text-center"
+            className="flex flex-col p-6 bg-lightBlue shadow-lg rounded-2xl text-center hover:text-lightBlue hover:bg-white transition duration-700 ease-in-out"
             style={{
               flex: "1 1 calc(33.333% - 1rem)",
-              minWidth: "280px",
-              maxWidth: "320px",
+              minWidth: "320px",
+              maxWidth: "380px",
             }}
           >
             <h2 className="text-2xl font-semibold mb-4 ">{plan.title}</h2>

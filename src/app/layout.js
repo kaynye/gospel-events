@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import localFont from "next/font/local";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -9,6 +10,10 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const ttFirsNeue = localFont({
+  src: "./font/tt_firs_neue/TT_Firs_Neue_Trial_Regular.ttf",
 });
 
 export const metadata = {
@@ -22,11 +27,7 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="icon" href="/logo.ico" sizes="any" />
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <body className={`${ttFirsNeue.className} antialiased`}>{children}</body>
     </html>
   );
 }

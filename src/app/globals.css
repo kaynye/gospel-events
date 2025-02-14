@@ -7,7 +7,8 @@
   --foreground: #171717;
   --primary: rgb(232, 206, 176);
   --primary-text-color: #ffffff;
-  --dark-blue: #117170;
+  /* --dark-blue: #117170; */
+  --dark-blue: #082529;
   --light-blue: #0E918C;
   --secondary: #532B2B;
   --terciary: #F14D25;
@@ -30,8 +31,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* --background: #0a0a0a;
+    --foreground: #ededed; */
   }
 }
 
@@ -42,5 +43,6 @@ html{
 body {
   color: var(--primary-text-color);
   background: var(--primary);
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
+  font-size: 24px;
 }

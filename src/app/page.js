@@ -1,11 +1,17 @@
 import Image from "next/image";
 import Header from "./components/header";
 import Princing from "./components/Pricing";
+import { Clicker_Script } from "next/font/google";
 
 export const metadata = {
   title: "Gospel Events",
   description: "Groupe de musique pour evenement",
 };
+
+const clicker_script = Clicker_Script({
+  weight: "400",
+  subsets: ["latin"],
+});
 
 export default function Home() {
   return (
@@ -13,8 +19,8 @@ export default function Home() {
       <main className="">
         <Header />
         <div className="md:flex px-8 my-10 ">
-          <div className="flex-[3] flex justify-center flex-col ">
-            <h3 className="text-5xl">Gospels Event</h3>
+          <div className="flex-[4] flex justify-center flex-col ">
+            <h3 className="text-5xl mb-4">Gospels Event</h3>
             <p className="">
               Le groupe gospel spécialisé dans l'animation d'événements
             </p>
@@ -30,8 +36,14 @@ export default function Home() {
             />
           </div>
         </div>
+        <video controls={false} preload="none" autoPlay loop muted className="w-full  hidden md:block">
+          <source src="/video.mp4" type="video/mp4" />
+        </video>
+        <div className="w-full ">
+
+        </div>
         {/* Qui somme nous */}
-        <div className="md:flex justify-around flex-row-reverse px-8 bg-darkBlue py-4">
+        <div className="md:flex justify-around flex-row-reverse px-8 bg-primary py-8">
           <div className="flex-[1] self-center ">
             <h3 className="text-5xl" id="who">
               Qui sommes nous ?
@@ -49,12 +61,21 @@ export default function Home() {
               Vous souhaitez une chanson qui raconte votre histoire, composées
               rien que pour vous, C’est possible aussi.
               <br />
-              <br />
-              N’hésitez plus! Contactez-nous!
-              <br />
-              Musicalement <br />
-              Joëlle & Stéphanie
             </p>
+
+            <div className="flex justify-between mt-8">
+              <div className=" flex flex-col justify-between">
+                <span className={`${clicker_script.className} text-3xl md:text-5xl mb-4`}>
+                  Musicalement,
+                </span>
+                <span className={`${clicker_script.className} text-3xl md:text-5xl`}>
+                  Joëlle & Stéphanie
+                </span>
+              </div>
+              <button className="bg-primary text-secondary px-8 md:py-4 h-fit self-center border border-secondary rounded-full hover:bg-secondary hover:text-white duration-500">
+                Nous contacter
+              </button>
+            </div>
           </div>
 
           <div className="flex-[1] mt-4">
