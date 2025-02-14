@@ -141,8 +141,8 @@ export function IcSharpMenu(props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="4em"
-      height="4em"
+      width="3em"
+      height="3em"
       viewBox="0 0 24 24"
       {...props}
     >

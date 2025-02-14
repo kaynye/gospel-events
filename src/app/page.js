@@ -48,7 +48,7 @@ export default function Home() {
             <h3 className="text-5xl" id="who">
               Qui sommes nous ?
             </h3>
-            <p className="mt-4">
+            <p className="mt-4 text-base">
               Gospel Events God Bless You est une SAS gérée par Joëlle GENEVIEVE
               & Stéphanie NZIENGUE. Cette entreprise souhaite partager le cœur
               de l’évangile au travers de la musique. <br />
