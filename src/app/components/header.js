@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 
 import { Quintessential } from "next/font/google";
 import localFont from "next/font/local";
+import { useMediaQuery } from "react-responsive";
 
 const quintessential = Quintessential({
   weight: "400",
@@ -15,8 +16,11 @@ const mocholate = localFont({
   src: "../font/Micholate.otf",
 });
 
+
+
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  
 
   return (
     <Navbar />
@@ -187,20 +191,12 @@ const bgColor = "bg-gray-800";
 const modalColor = "bg-gray-900";
 
 const Navbar = () => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 769);
   const [showModal, setShowModal] = useState(false);
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 769);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  const useDesktopMediaQuery = () =>
+    useMediaQuery({
+      minWidth: 769,
+    });
 
   const toggleModal = () => {
     setShowModal(!showModal);
@@ -211,7 +207,7 @@ const Navbar = () => {
   };
   return (
     <>
-      {!isMobile ? (
+      {useDesktopMediaQuery() ? (
         // Laptop Navbar Code Here
         <nav
           className={`h-auto bg-primary border border-b-white sticky top-0 z-20`}
