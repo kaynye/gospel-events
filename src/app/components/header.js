@@ -176,7 +176,7 @@ export function CrossOutline(props) {
 const navLinks = [
   { title: "Accueil", url: "/" },
   { title: "Qui sommes-nous", url: "#who" },
-  { title: "Répertoire", url: "/chant" },
+  { title: "Répertoire", url: "/repertoire" },
   { title: "Formules", url: "#formules" },
   { title: "Contact", url: "#formules" },
 ];
@@ -210,7 +210,7 @@ const Navbar = () => {
       {useDesktopMediaQuery() ? (
         // Laptop Navbar Code Here
         <nav
-          className={`h-auto bg-primary border border-b-white sticky top-0 z-20`}
+          className={`h-auto bg-secondary border border-b-white sticky top-0 z-20`}
         >
           <div className="flex justify-between mx-auto items-center py-0 px-24">
             <div className="text-white font-bold text-xl">
@@ -272,7 +272,7 @@ const Navbar = () => {
           </div>
           {showModal && (
             <div className="fixed inset-0 flex justify-center items-center ">
-              <div className={`absolute inset-0 bg-primary`} />
+              <div className={`absolute inset-0 bg-secondary`} />
               <CrossOutline
                 className="absolute top-6 right-4 text-white cursor-pointer"
                 onClick={toggleModal}

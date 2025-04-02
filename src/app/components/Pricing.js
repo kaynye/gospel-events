@@ -38,7 +38,7 @@ const PricingPage = () => {
   };
 
   return (
-    <section className="flex flex-col items-center justify-center pt-12 pb-16 min-h-[70vh] bg-darkBlue">
+    <section className="flex flex-col items-center justify-center pt-12 pb-16 min-h-[70vh] bg-darkBlue text-secondaryText">
       <div className="flex justify-between w-full px-16">
       <h2 className="text-3xl font-bold mb-8 " id="formules">
         Nos Formules
@@ -73,8 +73,7 @@ const PricingPage = () => {
               maxWidth: "380px",
             }}
           >
-            <h2 className="text-2xl font-semibold mb-4 ">{plan.title}</h2>
-
+            <h2 className="text-2xl font-semibold mb-4">{plan.title}</h2>
             <ul className=" space-y-2">
               {plan.features.map((feature, i) => (
                 <li key={i}>✓ {feature}</li>

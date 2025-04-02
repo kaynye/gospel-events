@@ -11,6 +11,7 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
         primary: "var(--primary)",
+        secondaryText: "var(--secondary-text-color)",
         secondary: "var(--secondary)",
         terciary: "var(--terciary)",
         darkBlue: "var(--dark-blue)",
