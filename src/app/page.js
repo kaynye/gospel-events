@@ -24,6 +24,9 @@ export default function Home() {
             <p className="">
               Le groupe gospel spécialisé dans l'animation d'événements
             </p>
+            <button className="bg-primary text-darkBlue px-8 md:py-4 md:ml-auto self-left border border-darkBlue rounded-full hover:bg-darkBlue hover:text-white duration-500 my-4 md:mr-12">
+                Nous contacter
+              </button>
           </div>
           <div className="flex-[5]">
             <Image
