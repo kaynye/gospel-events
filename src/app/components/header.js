@@ -210,7 +210,7 @@ const Navbar = () => {
       {useDesktopMediaQuery() ? (
         // Laptop Navbar Code Here
         <nav
-          className={`h-auto bg-secondary border border-b-white sticky top-0 z-20`}
+          className={`h-auto bg-secondary sticky top-0 z-20`}
         >
           <div className="flex justify-between mx-auto items-center py-0 px-24">
             <div className="text-white font-bold text-xl">
