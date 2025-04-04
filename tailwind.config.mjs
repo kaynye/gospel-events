@@ -12,7 +12,10 @@ export default {
         foreground: "var(--foreground)",
         primary: "var(--primary)",
         secondaryText: "var(--secondary-text-color)",
-        secondary: "var(--secondary)",
+        secondary:{
+          DEFAULT: "#6f3c29", // Brown from the original website
+          foreground: "#ffffff", // White text on brown
+        },
         terciary: "var(--terciary)",
         darkBlue: "var(--dark-blue)",
         lightBlue: "var(--light-blue)",

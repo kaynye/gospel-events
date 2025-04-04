@@ -175,10 +175,10 @@ export function CrossOutline(props) {
 
 const navLinks = [
   { title: "Accueil", url: "/" },
-  { title: "Qui sommes-nous", url: "#who" },
+  { title: "Qui sommes-nous", url: "/#who" },
   { title: "Répertoire", url: "/repertoire" },
-  { title: "Formules", url: "#formules" },
-  { title: "Contact", url: "#formules" },
+  { title: "Formules", url: "/#formules" },
+  { title: "Contact", url: "/#contact" },
 ];
 
 const iconList = [
