@@ -245,7 +245,7 @@ const Navbar = () => {
       ) : (
         // Mobile Navbar Code Here
         <nav
-          className={`h-fit w-screen bg-secondary border-white sticky top-0 `}
+          className={`h-fit w-screen bg-secondary border-white sticky top-0 z-10`}
         >
           <div className="mx-auto flex justify-between items-center ">
             <div className="text-white font-bold text-xl">
