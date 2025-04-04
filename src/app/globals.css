@@ -51,7 +51,7 @@ body {
 .hero-section {
   background-image: url('/group.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: 50% 35%;
   position: relative;
 }
 
