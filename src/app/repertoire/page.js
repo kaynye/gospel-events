@@ -35,7 +35,7 @@ export default function RepertoirePage() {
         <div className="container mx-auto px-4 py-12 md:py-16">
           <div className="mb-8 flex items-center">
             <Link href="/">
-              <button variant="outline" className="flex items-center gap-2 bg-white hover:bg-white/90  px-4 rounded-full">
+              <button aria-label="home" variant="outline" className="flex items-center gap-2 bg-white hover:bg-white/90  px-4 rounded-full">
                 <ArrowLeft className="h-4 w-4" />
                 Retour à l'accueil
               </button>
@@ -76,7 +76,7 @@ export default function RepertoirePage() {
                 N'hésitez pas à nous demander si nous connaissons une chanson en particulier.
               </p>
               <Link href="/#contact">
-                <button className="bg-secondary text-white hover:bg-secondary/90 px-4 rounded-full">
+                <button aria-label="contact" className="bg-secondary text-white hover:bg-secondary/90 px-4 rounded-full">
                   Nous contacter pour une demande spéciale
                 </button>
               </Link>

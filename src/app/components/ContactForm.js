@@ -51,7 +51,8 @@ export function ContactForm() {
         <div className="flex justify-center">
           <button
             variant="secondary"
-            className="text-white"
+            className="text-secondary"
+            aria-label="Close"
             onClick={() => setShowModal(false)}
           >
             Fermer
@@ -162,6 +163,7 @@ export function ContactForm() {
           <button
             type="submit"
             variant="secondary"
+            aria-label="Send"
             className="px-8 py-2 rounded-full text-lg bg-secondary text-white"
           >
             Envoyer

@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { Quintessential } from "next/font/google";
 import localFont from "next/font/local";
 import { useMediaQuery } from "react-responsive";
+import Link from "next/link";
 
 const quintessential = Quintessential({
   weight: "400",
@@ -214,14 +215,18 @@ const Navbar = () => {
         >
           <div className="flex justify-between mx-auto items-center py-0 px-24">
             <div className="text-white font-bold text-xl">
-              <Image
+              
+            <Link href="/" >
+            <Image
                 className="dark:invert"
                 src="/logo.png"
-                alt="Next.js logo"
+                alt="logo"
                 width={60}
                 height={38}
                 priority
               />
+              </Link>
+              
             </div>
             <ul className="flex gap-8 md:gap-16 items-center justify-center text-center cursor-pointer">
               {navLinks.map((link, index) => (

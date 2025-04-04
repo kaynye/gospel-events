@@ -21,13 +21,13 @@ export function Hero() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8 align-center">
             <Link href="/#who" className="my-auto">
-              <button className="bg-primary text-darkBlue px-6 py-2 text-lg w-full sm:w-auto rounded-full">
+              <button aria-label="Who" className="bg-primary text-darkBlue px-6 py-2 text-lg w-full sm:w-auto rounded-full">
                 Qui somme nous ?
               </button>
             </Link>
 
             <Link href="/#formules" className="my-auto">
-            <button variant="outline" className="bg-transparent border-white text-white hover:bg-white/10 px-6 py-2 text-lg w-full sm:w-auto flex align-center border border-white rounded-full">
+            <button variant="outline" aria-label="formules" className="bg-transparent border-white text-white hover:bg-white/10 px-6 py-2 text-lg w-full sm:w-auto flex align-center border border-white rounded-full">
                 <List className="mr-2 h-5 w-5 self-center" />
                 Découvrir nos formules
               </button>
@@ -66,7 +66,7 @@ export function Hero() {
 
           <div className="mt-12 md:mt-16 flex justify-center">
             <Link href="/#contact" className="animate-bounce">
-              <button variant="outline" className="bg-transparent border border-white text-white hover:bg-white/10 rounded-full h-14 w-14 p-0">
+              <button aria-label="contact" variant="outline" className="bg-transparent border border-white text-white hover:bg-white/10 rounded-full h-14 w-14 p-0">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
