@@ -73,7 +73,7 @@ const PricingPage = () => {
               maxWidth: "380px",
             }}
           >
-            <h2 className="text-2xl font-semibold mb-4">{plan.title}</h2>
+            <p className="text-2xl font-semibold mb-4">{plan.title}</p>
             <ul className=" space-y-2">
               {plan.features.map((feature, i) => (
                 <li key={i}>✓ {feature}</li>

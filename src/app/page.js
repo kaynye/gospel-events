@@ -12,7 +12,6 @@ export const metadata = {
   lang: "fr"
 };
 
-
 export default function Home() {
   return (
     <div className="">
