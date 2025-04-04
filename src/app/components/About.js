@@ -3,6 +3,7 @@
 import { Heart, Music, Star } from "lucide-react";
 import { Clicker_Script } from "next/font/google";
 import Image from "next/image";
+import Link from "next/link";
 
 const clicker_script = Clicker_Script({
   weight: "400",
@@ -67,9 +68,11 @@ const AboutPage = () => {
                   Joëlle & Stéphanie
                 </span>
               </div>
-              <button className="bg-primary text-secondary px-8 md:py-4 h-fit self-center border border-secondary rounded-full hover:bg-secondary hover:text-white duration-500">
-                Nous contacter
-              </button>
+              <Link href="/#contact">
+              <button aria-label="contact" className="bg-primary text-secondary px-8 md:py-4 h-fit self-center border border-secondary rounded-full hover:bg-secondary hover:text-white duration-500">
+                    Nous contacter
+                  </button>
+              </Link>
             </div>
           </div>
 
