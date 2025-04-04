@@ -8,7 +8,8 @@ import { ContactForm } from "./components/ContactForm";
 
 export const metadata = {
   title: "Gospel Events",
-  description: "Groupe de musique pour evenement",
+  description: "Groupe de musique gospel pour evenement en region centre (Orleans, Blois)",
+  lang: "fr"
 };
 
 

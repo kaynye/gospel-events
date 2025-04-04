@@ -25,116 +25,6 @@ export default function Header() {
 
   return (
     <Navbar />
-    // <header className="sticky top-0">
-    //   <div className="flex items-center py-4 md:justify-normal justify-between">
-    //     <Image
-    //       className="dark:invert"
-    //       src="/logo.png"
-    //       alt="Next.js logo"
-    //       width={100}
-    //       height={38}
-    //       priority
-    //     />
-
-    //     <h2
-    //       className={`${quintessential.className} text-8xl mx-auto hidden sm:block`}
-    //     >
-    //       God bless you
-    //     </h2>
-
-    //     <div className="p-4 self-start block sm:hidden">
-    //       <IcSharpMenu className="" onClick={() => setIsOpen(true)} />
-    //     </div>
-    //   </div>
-    //   <nav className="border-b border-white hidden sm:block ">
-    //     <ul className="flex justify-around text-3xl">
-    //       <li>
-    //         <a href="#" className=" hover:underline">
-    //           Accueil
-    //         </a>
-    //       </li>
-    //       <li>
-    //         <a href="#who" className=" hover:underline">
-    //           Qui sommes-nous
-    //         </a>
-    //       </li>
-    //       <li>
-    //         <a href="#chant" className=" hover:underline">
-    //           Bibliothéque
-    //         </a>
-    //       </li>
-    //       <li>
-    //         <a href="#formules" className=" hover:underline">
-    //           Formules
-    //         </a>
-    //       </li>
-    //       <li>
-    //         <a href="#" className=" hover:underline">
-    //           Contact
-    //         </a>
-    //       </li>
-    //     </ul>
-    //   </nav>
-
-    //   <nav
-    //     className={` ${
-    //       isOpen ? "translate-x-0" : "translate-x-full"
-    //     }  fixed top-0 bg-primary duration-700 transform transition-transform h-screen w-screen block md:hidden`}
-    //   >
-    //     <CrossOutline
-    //       className="align-left absolute right-1 top-4"
-    //       onClick={() => setIsOpen(false)}
-    //     />
-
-    //     <ul className="flex flex-col h-full items-center text-3xl">
-    //       <li className="mt-32">
-    //         <a
-    //           href="#"
-    //           onClick={() => setIsOpen(false)}
-    //           className=" hover:underline"
-    //         >
-    //           Accueil
-    //         </a>
-    //       </li>
-    //       <li className="pt-8">
-    //         <a
-    //           href="#who"
-    //           onClick={() => setIsOpen(false)}
-    //           className=" hover:underline"
-    //         >
-    //           Qui sommes-nous
-    //         </a>
-    //       </li>
-    //       <li>
-    //         <a
-    //           href="/chant"
-    //           onClick={() => setIsOpen(false)}
-    //           className=" hover:underline"
-    //         >
-    //           Bibliothéque
-    //         </a>
-    //       </li>
-    //       <li className="pt-8">
-    //         <a
-    //           href="#formules"
-    //           onClick={() => setIsOpen(false)}
-    //           className=" hover:underline"
-    //         >
-    //           Formules
-    //         </a>
-    //       </li>
-    //       <li className="pt-7">
-    //         <a
-    //           href="#"
-    //           onClick={() => setIsOpen(false)}
-    //           className=" hover:underline"
-    //         >
-    //           Contact
-    //         </a>
-    //       </li>
-    //     </ul>
-    //   </nav>
-    // </header>
   );
 }
 
@@ -252,7 +142,7 @@ const Navbar = () => {
               <Image
                 className="dark:invert"
                 src="/logo.png"
-                alt="Next.js logo"
+                alt="logo mobile"
                 width={60}
                 height={38}
                 priority

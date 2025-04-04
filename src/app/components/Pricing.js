@@ -49,7 +49,7 @@ const PricingPage = () => {
         <Image
           className="dark:invert"
           src="/logo-primary.png"
-          alt="Next.js logo"
+          alt="logo initial"
           width={60}
           height={38}
           priority

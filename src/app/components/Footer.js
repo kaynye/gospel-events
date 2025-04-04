@@ -25,6 +25,7 @@ export function Footer() {
               <Link
                 href="https://facebook.com"
                 target="_blank"
+                rel="rel noopener"
                 className="hover:text-primary transition-colors"
                 aria-label="Facebook"
               >
@@ -33,6 +34,7 @@ export function Footer() {
               <Link
                 href="https://instagram.com"
                 target="_blank"
+                rel="rel noopener"
                 className="hover:text-primary transition-colors"
                 aria-label="Instagram"
               >
@@ -77,10 +79,6 @@ export function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4">Contact</h3>
             <div className="space-y-3">
-              <div className="flex items-center gap-2">
-                <Phone className="w-5 h-5 text-primary" />
-                <span>+33 (0)6 12 34 56 78</span>
-              </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-5 h-5 text-primary" />
                 <span>contact@gospel-events.fr</span>
