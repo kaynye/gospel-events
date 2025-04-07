@@ -7,7 +7,7 @@ import { Footer } from "./components/Footer";
 import { ContactForm } from "./components/ContactForm";
 
 export const metadata = {
-  title: "Gospel Events",
+  title: "Gospel Events God Bless You",
   description: "Groupe de musique gospel pour evenement en region centre (Orleans, Blois)",
   lang: "fr"
 };

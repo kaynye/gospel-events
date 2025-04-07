@@ -11,12 +11,12 @@ export function Footer() {
             <div className="flex items-center gap-2 mb-4">
               <Image
                 src="/logo-primary.png"
-                alt="Gospel Events Logo"
+                alt="Gospel Events God bless you Logo"
                 width={60}
                 height={60}
                 className="w-12 h-12"
               />
-              <h3 className="text-2xl font-bold">Gospel Events</h3>
+              <h3 className="text-2xl font-bold">Gospel Events <i class="text-2x-l">God Bless You</i></h3>
             </div>
             <p className="text-gray-300 mb-4">
               Le groupe gospel spécialisé dans l'animation d'événements
@@ -41,7 +41,7 @@ export function Footer() {
                 <Instagram className="w-6 h-6" />
               </Link>
               <Link
-                href="mailto:contact@gospel-events.fr"
+                href="mailto:contact@ge.godblessyou.fr"
                 className="hover:text-primary transition-colors"
                 aria-label="Email"
               >
@@ -81,7 +81,7 @@ export function Footer() {
             <div className="space-y-3">
               <div className="flex items-center gap-2">
                 <Mail className="w-5 h-5 text-primary" />
-                <span>contact@gospel-events.fr</span>
+                <span>contact@ge.godblessyou.fr</span>
               </div>
               <div className="mt-6">
                 <Link
@@ -96,7 +96,7 @@ export function Footer() {
         </div>
 
         <div className="mt-8 pt-6 border-t border-gray-700 text-center text-gray-400">
-          <p>© {new Date().getFullYear()} Gospel Events. Tous droits réservés.</p>
+          <p>© {new Date().getFullYear()} Gospel Events <i>God Bless You</i>. Tous droits réservés.</p>
           <div className="mt-2 text-sm">
             <span className="font-cursive text-lg text-primary">
               Musicalement, Joëlle & Stéphanie

@@ -179,8 +179,12 @@ const Navbar = () => {
                       key={index}
                       className="text-white font-light text-2xl cursor-pointer"
                     >
+                      <Link href={link.url} onClick={toggleModal} >
                       {link.title}
+                      </Link>
                     </span>
+
+                   
                   ))}
                 </div>
               </div>

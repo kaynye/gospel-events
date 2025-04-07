@@ -16,7 +16,7 @@ export function Hero() {
             Rendez votre événement inoubliable
           </h1>
           <p className="text-xl md:text-2xl text-white/90 mb-8 drop-shadow-md">
-            Gospel Events, le groupe gospel spécialisé dans l'animation d'événements
+            Gospel Events <i>God Bless You</i>, le groupe gospel spécialisé dans l'animation d'événements
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8 align-center">
