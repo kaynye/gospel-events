@@ -6,24 +6,63 @@ import { Footer } from "../components/Footer";
 // Group songs into categories
 const categories = {
   "Baptême": [
-    "La bénédiction",
+    "La bénédiction de NV Worship",
     "La lumière du monde de Jessy Palma",
-    "Je te donne mon cœur",
-    "God with us",
+    "Je te donne mon cœur de Luc Dumont",
+    "God with us de Terrian",
   ],
   "Obsèque": [
-    "Amazing grace" ,
+    "Amazing grace de CECE Winans" ,
     "La source de Jessy Elsa P.",
     "His eyes is on the sparrow" ,
     "I dont’ feel no ways de Mary Mary",
-    "Stand by me",
-    "How great is our god" ,
-    "Total Praise" ,
+    "Stand by me de Karen Gibson",
+    "How great is our god de Darlene Zschech",
+    "Total Praise de Christina Bell",
+    "Abrite-moi de Kelly Picat",
 
   ],
-  "Cérémonie & Cocktails": [
-    "Tous les chants"
-  ]
+  "Cérémonie": [
+    "If I ain't got You de Alicia Keys",
+    "I smile de Kirk Franklin",
+    "Oh happy day ",
+    "I say a Little payer de Aretha Franklin",
+    "Joshua fit the battle of jericho",
+    "Kumama",
+    "Down by the riverside",
+    "Stand by me de Karen Gibson",
+    "You raise me up de Josh Groban ",
+    "L'envie d'aimer de Les 10 commandements",
+    "All of me de John Legend",
+    "Ô mon âme béni l’Eternel de Jonathan Munghongwa"
+  ],
+  "Cocktails": [
+    "Oh happy day" ,
+    "This Little light of mine",
+    "I say a Little payer",
+    "Smille" ,
+    "Mary did You Know",
+    "Kumama",
+    "Joshua fit the battle of Jericho",
+    "La bénédiction",
+    "God with us",
+    "Amazing grace",
+    "Beautiful You are",
+    "Total praise",
+    "Down by the riverside",
+    "When the saints",
+    "How great is our god",
+    "Take me to the king",
+    "Wade in the water",
+    "Stand by me",
+    "A thousand years",
+    "His eyes is on the sparrow",
+    "The center of my Joy",
+    "Ma vie et ma joie",
+    "Agnus dei",
+    "You raise me up",
+    "L'envie d'aimer"
+  ],
 };
 
 export default function RepertoirePage() {

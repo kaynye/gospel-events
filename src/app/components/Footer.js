@@ -41,7 +41,7 @@ export function Footer() {
                 <Instagram className="w-6 h-6" />
               </Link>
               <Link
-                href="mailto:contact@ge.godblessyou.fr"
+                href="mailto:ge.godblessyou@gmail.com"
                 className="hover:text-primary transition-colors"
                 aria-label="Email"
               >
@@ -81,7 +81,7 @@ export function Footer() {
             <div className="space-y-3">
               <div className="flex items-center gap-2">
                 <Mail className="w-5 h-5 text-primary" />
-                <span>contact@ge.godblessyou.fr</span>
+                <span>ge.godblessyou@gmail.com</span>
               </div>
               <div className="mt-6">
                 <Link
