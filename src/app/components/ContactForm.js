@@ -11,6 +11,8 @@ export function ContactForm() {
     message: "",
     eventType: "",
   });
+  const [submissionStatus, setSubmissionStatus] = useState(null); // null, 'loading', 'success', 'error'
+  const [submissionError, setSubmissionError] = useState(null);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [showModal, setShowModal] = useState(false);
 
@@ -22,23 +24,44 @@ export function ContactForm() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Dans une application réelle, vous enverriez les données à un serveur
-    console.log("Form data:", formData);
+    setSubmissionStatus('loading');
+    setSubmissionError(null);
 
-    // Afficher le message de succès
-    setShowModal(true);
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-    // Réinitialiser le formulaire
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      message: "",
-      eventType: "",
-    });
-    setIsSubmitted(true);
+      const result = await response.json();
+
+      if (response.ok) {
+        setSubmissionStatus('success');
+        setShowModal(true); // Show success modal
+        setFormData({ // Reset form
+          name: "",
+          email: "",
+          phone: "",
+          message: "",
+          eventType: "",
+        });
+        setIsSubmitted(true); // This state might be redundant if setShowModal is used
+      } else {
+        setSubmissionStatus('error');
+        setSubmissionError(result.message || 'An unexpected error occurred.');
+        setShowModal(false); // Ensure modal is hidden on error
+      }
+    } catch (error) {
+      setSubmissionStatus('error');
+      setSubmissionError('Failed to connect to the server. Please try again later.');
+      setShowModal(false); // Ensure modal is hidden on error
+      console.error('Form submission error:', error);
+    }
   };
 
   const Modal = () => (
@@ -171,7 +194,13 @@ export function ContactForm() {
         </div>
       </form>
 
-      {showModal && <Modal />}
+      {submissionStatus === 'error' && (
+        <p className="text-red-500 text-center mt-4">{submissionError}</p>
+      )}
+      {submissionStatus === 'loading' && (
+        <p className="text-center mt-4">Sending...</p>
+      )}
+      {showModal && submissionStatus === 'success' && <Modal />}
     </div>
   );
 }
